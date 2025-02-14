@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rat Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fef3c7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .screen {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+        }
+        .active {
+            display: flex;
+        }
+        .text-container {
+            max-height: 70vh;
+            overflow-y: auto;
+            text-align: left;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #ff85a2;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="screen1" class="screen active">
+        <h1 style="font-size: 22px;">Verifying if you're a rat...</h1>
+        <p class="loading" style="font-size: 20px;">Loading<span id="dots">.</span></p>
+        <button onclick="nextScreen()">Next</button>
+    </div>
+
+    <div id="screen2" class="screen">
+        <h1 style="font-size: 22px;">Who are you?</h1>
+        <button onclick="nextScreenText()">Brookie</button>
+        <button onclick="nextScreenText()">Diddy</button>
+        <button onclick="nextScreenText()">Ibrahim Gyat</button>
+    </div>
+
+    <div id="screen3" class="screen">
+        <div class="text-container">
+            <p style="font-size: 18px;">BROOKLYN, YOU ARE TRULY EVERYTHING I COULD EVER ASK FOR IN A PERSON, AND I FEEL LIKE THE LUCKIEST PERSON ALIVE TO HAVE YOU BY MY SIDE. EVERY SINGLE MOMENT I GET TO SPEND WITH YOU FILLS MY HEART WITH SO MUCH LOVE AND GRATITUDE, AND I COULD NEVER FULLY EXPRESS HOW MUCH YOU MEAN TO ME. YOU’RE NOT JUST MY GIRLFRIEND, YOU’RE MY BEST FRIEND, MY ROCK, AND THE ONE PERSON WHO MAKES MY LIFE SO MUCH BETTER JUST BY BEING IN IT. YOU COMPLETELY CHANGE THE WORLD AROUND ME, AND EVERY TIME YOU SMILE, THE WHOLE UNIVERSE LIGHTS UP. THE WAY YOU LAUGH, THE WAY YOU CARE, THE WAY YOU MAKE ME FEEL, IT’S ALL SO PERFECT, AND I’M FOREVER GRATEFUL THAT YOU CHOSE ME.
+            
+            I COULD LITERALLY NEVER GET MAD AT YOU, BECAUSE YOU’RE JUST TOO AMAZING TO STAY MAD AT. EVEN WHEN WE GO THROUGH TOUGH TIMES, I KNOW THAT WE’RE IN IT TOGETHER, AND THERE’S NOTHING THAT CAN BREAK US. YOU ALWAYS KNOW HOW TO MAKE ME SMILE, AND YOU ALWAYS KNOW THE RIGHT WORDS TO SAY TO EASE MY WORRIES. YOUR HEART IS SO BIG AND BEAUTIFUL, AND THE WAY YOU LOVE ME IS SOMETHING I’LL NEVER TAKE FOR GRANTED. I LOVE THE WAY YOUR EYES SPARKLE WHEN YOU’RE HAPPY, AND HOW YOU CARE SO MUCH ABOUT OTHERS. YOU’RE KIND AND CARING, AND YOUR LOVE MAKES EVERYTHING FEEL SO MUCH BETTER. I AM SO INCREDIBLY BLESSED THAT YOU’RE MY GIRLFRIEND.
+            
+            YOU INSPIRE ME TO BE A BETTER PERSON EVERY DAY. I NEVER THOUGHT I COULD LOVE SOMEONE SO DEEPLY, BUT YOU HAVE OPENED MY EYES TO WHAT REAL LOVE IS. YOU’VE SHOWN ME WHAT IT FEELS LIKE TO TRULY BE LOVED, TO BE UNDERSTOOD, AND TO BE SUPPORTED IN WAYS I NEVER KNEW WERE POSSIBLE. YOU MAKE ME WANT TO BE THE BEST VERSION OF MYSELF, AND I WILL SPEND MY LIFE TRYING TO MAKE YOU PROUD AND HAPPY. I KNOW THAT WE’RE A TEAM, AND TOGETHER, THERE’S NOTHING WE CAN’T DO. IF YOU EVER STRUGGLE, I WILL BE RIGHT THERE BY YOUR SIDE, HOLDING YOUR HAND THROUGH IT ALL. I WILL BE YOUR STRENGTH WHEN YOU NEED IT, AND YOUR SUPPORT WHEN YOU FEEL WEAK. TOGETHER, WE CAN CONQUER ANYTHING, AND I BELIEVE THAT WITH ALL MY HEART.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function nextScreen() {
+            document.getElementById('screen1').classList.remove('active');
+            document.getElementById('screen2').classList.add('active');
+        }
+
+        function nextScreenText() {
+            document.getElementById('screen2').classList.remove('active');
+            document.getElementById('screen3').classList.add('active');
+        }
+    </script>
+</body>
+</html>
